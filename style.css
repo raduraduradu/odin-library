@@ -1,0 +1,56 @@
+:root {
+  --color1: #C9DABF;
+  --color2: #9CA986;
+  --color3: #808D7C;
+  --color4: #5F6F65;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color1);
+}
+
+.container {
+  border: 1px dotted var(--color2);
+  height: 70%;
+  width: 70%;
+  margin: auto;
+  
+  display: grid;
+  grid-template: 310px 310px / repeat(auto-fit, 230px);
+}
+
+.book-card {
+  background-color: var(--color2);
+  padding: 20px;
+  display: grid;
+  justify-items: left;
+  align-items: center;
+
+  border: 2px solid var(--color1);
+}
+
+
+
+.book-card .bottom-div{
+  justify-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read,
+.not-read {
+
+}
+
+button {
+  border: none;
+}
+
+.del-button {
+  background-color: #AE4343;
+  color: white;
+  justify-self: end;
+  border-radius: 5px;
+}
