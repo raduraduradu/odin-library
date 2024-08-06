@@ -39,13 +39,19 @@ body {
   align-items: center;
 }
 
-.read,
-.not-read {
+.read {
+  background-color: green;
+  color: white;
+}
 
+.not-read {
+  background-color: #AE4343;
+  color: white;
 }
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 .del-button {
@@ -53,4 +59,12 @@ button {
   color: white;
   justify-self: end;
   border-radius: 5px;
+}
+
+button#add-book {
+  background-color: var(--color3);
+  color: white;
+  font-size: 25px;
+  padding: 8px 16px;
+  margin: 50px 15%;
 }
