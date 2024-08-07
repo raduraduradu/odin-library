@@ -68,3 +68,25 @@ button#add-book {
   padding: 8px 16px;
   margin: 50px 15%;
 }
+
+#modal {
+  background-color: var(--color3);
+  color: white;
+  font-family: roboto;
+}
+
+#modal div {
+  margin: 35px 5px;
+}
+
+#modal button {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+}
+
+#modal #form-cancel {
+  background-color: var(--color4);
+}
