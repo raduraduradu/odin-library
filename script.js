@@ -31,6 +31,7 @@ function loadBook(id) {
   
   container.insertAdjacentHTML('beforeend', card);
 
+  //event listener for "read" buttons
   document.querySelector(`.container #card${id} .read-button`).addEventListener("click", (e) => {
     e.target.classList.toggle("read");
     e.target.classList.toggle("not-read");
@@ -43,6 +44,14 @@ function loadBook(id) {
     }
 
     myLibrary[id].read = !myLibrary[id].read;
+  })
+
+  //event listener for X buttons
+  document.querySelector(`.container #card${id} .del-button`).addEventListener("click", (e) => {
+    if(confirm("Book entry will be deleted permanently. Are you sure you want to continue?") == true){
+      document.querySelector(`#card${id}`).remove();
+      myLibrary[id] = undefined;
+    }
   })
 }
 
@@ -89,4 +98,4 @@ form.addEventListener("submit", (e) => {
     let newBook = new Book(form["book-title"].value, form["author"].value, form["pages"].value, strToBool(form["read"].value));
     addBookToLibrary(newBook);
   }
-})
+});
