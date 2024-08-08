@@ -7,17 +7,26 @@
 
 body {
   height: 100vh;
-  background-color: var(--color1);
+  background-color: var(--color3);
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
 }
 
 .container {
   border: 1px dotted var(--color2);
   height: 70%;
-  width: 70%;
+  width: 75%;
   margin: auto;
   
   display: grid;
-  grid-template: 310px 310px / repeat(auto-fit, 230px);
+  grid-template: 1fr 1fr / repeat(auto-fit, 230px);
+  overflow-y: auto;
+
+  background-color: var(--color4);
+  padding: 10px;
 }
 
 .book-card {
@@ -62,7 +71,7 @@ button {
 }
 
 button#add-book {
-  background-color: var(--color3);
+  background-color: var(--color4);
   color: white;
   font-size: 25px;
   padding: 8px 16px;
